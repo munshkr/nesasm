@@ -12,15 +12,7 @@ Main differences from the original:
 ## Install
 
 You will need [CMake](https://cmake.org/) for building. After installing and
-cloning the repository do the following:
-
-```
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-```
+cloning the repository run `make` to compile and `sudo make install` to install.
 
 ## License
 
