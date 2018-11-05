@@ -9,8 +9,7 @@
 #endif
 
 /* machine */
-#define MACHINE_PCE	0
-#define MACHINE_NES	1
+#define MACHINE_NES	0
 
 /* reserved bank index */
 #define RESERVED_BANK	0xF0

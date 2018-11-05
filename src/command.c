@@ -574,11 +574,6 @@ do_incbin(int *ip)
 				do_mx(fname);
 				return;
 			}
-			/* check if it's a map file */
-			if (!strcasecmp(p, ".fmp")) {
-				if (pce_load_map(fname, 0))
-					return;
-			}
 		}
 	}
 

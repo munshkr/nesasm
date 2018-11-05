@@ -88,9 +88,6 @@ int  calc_bank_base(void);
 void help(void);
 void show_seg_usage(void);
 
-/* MAP.C */
-int pce_load_map(char *fname, int mode);
-
 /* OUTPUT.C */
 void println(void);
 void clearln(void);

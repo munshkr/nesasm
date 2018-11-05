@@ -89,11 +89,7 @@ main(int argc, char **argv)
 	if ((p = strrchr(prg_name, '.')) != NULL)
 		*p = '\0';
 
-	/* machine detection */
-	if (!strncasecmp(prg_name, "PCE", 3))
-		machine = &pce;
-	else
-		machine = &nes;
+    machine = &nes;
 
 	/* init assembler options */
 	list_level = 2;
@@ -149,33 +145,6 @@ main(int argc, char **argv)
 				else if (!strcmp(argv[i], "-?")) {
 					help();
 					return (0);
-				}
-
-				else {
-					/* PCE specific functions */
-					if (machine->type == MACHINE_PCE) {
-						/* cd-rom */
-						if (!strcmp(argv[i], "-cd")) {
-							cd_opt  = STANDARD_CD;
-							scd_opt = 0;
-						}
-
-						/* super cd-rom */
-						else if (!strcmp(argv[i], "-scd")) {
-							scd_opt = SUPER_CD;
-							cd_opt  = 0;
-						}
-
-						/* develo auto-run */
-						else if (!strcmp(argv[i], "-develo"))
-							develo_opt = 1;
-						else if (!strcmp(argv[i], "-dev"))
-							develo_opt = 1;
-		
-						/* output mx file */
-						else if (!strcmp(argv[i], "-mx"))
-							mx_opt = 1;
-				 	}
 				}
 			}
 			else {
@@ -561,12 +530,6 @@ help(void)
 	printf("-l #   : listing file output level (0-3)\n");
 	printf("-m     : force macro expansion in listing\n");
 	printf("-raw   : prevent adding a ROM header\n");
-	if (machine->type == MACHINE_PCE) {
-		printf("-cd    : create a CD-ROM binary image\n");
-		printf("-scd   : create a Super CD-ROM binary image\n");
-		printf("-dev   : assemble and run on the Develo Box\n");
-		printf("-mx    : create a Develo MX file\n");
-	}
 	printf("-srec  : create a Motorola S-record file\n");
 	printf("infile : file to be assembled\n");
 }

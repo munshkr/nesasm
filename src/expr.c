@@ -578,15 +578,6 @@ check_keyword(void)
 		op = OP_BANK;
 	else if (!strcasecmp(symbol, keyword[7]))
 		op = OP_SIZEOF;
-	else {
-		if (machine->type == MACHINE_PCE) {
-			/* PCE specific functions */
-			if (!strcasecmp(symbol, keyword[5]))
-				op = OP_VRAM;
-			else if (!strcasecmp(symbol, keyword[6]))
-				op = OP_PAL;
-		}
-	}
 
 	/* extra setup for functions that send back symbol infos */
 	switch (op) {

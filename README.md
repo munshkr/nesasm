@@ -1,11 +1,13 @@
 # nesasm
 
-NESASM, a NES/PCE assembler.
+A NES assembler written in C.
 
 The source code was based off bunnyboy's modifications of the original NESASM,
-available [here](http://www.nespowerpak.com/nesasm/NESASM3.zip).  The only
-difference is that this uses CMake for building, which makes it easier for me
-to use with Emscripten.
+available [here](http://www.nespowerpak.com/nesasm/NESASM3.zip).
+
+Main differences from the original:
+  * PC-Engine support was removed
+  * Uses CMake as build tool
 
 ## Install
 
@@ -26,14 +28,10 @@ This program is freeware. You are free to distribute, use and modifiy it as you
 wish.
 
 Original 6502 version by:
-  * J. H. Van Ornum
-
-PC-Engine version by:
-  * David Michel
-  * Dave Shadoff
+* J. H. Van Ornum
 
 NES version by:
-  * Charles Doty
+* Charles Doty
 
 Further modifications by:
-  * bunnyboy, from [RetroUSB](https://www.retrousb.com/)
+* bunnyboy, from [RetroUSB](https://www.retrousb.com/)
