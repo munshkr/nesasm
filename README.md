@@ -9,6 +9,8 @@ Main differences from the original:
   * PC-Engine support was removed
   * Uses CMake as build tool
 
+Original documentation can be found at `docs/`
+
 ## Install
 
 You will need [CMake](https://cmake.org/) for building. After installing and
